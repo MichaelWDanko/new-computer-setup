@@ -26,3 +26,27 @@ A project of things that need to be setup to help configure a new computer
 1. `touch ~/.gitignore_global`
 2. `open ~/.gitignore_global`
 3. `git config --global core.excludesfile ~/.gitignore_global`
+
+#### Sample .gitignore global file
+```
+# OS generated files #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs and databases #
+*.log
+*.sql
+*.sqlite
+
+# Swift Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Xcode user settings
+xcuserdata/
+```
