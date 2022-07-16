@@ -50,6 +50,33 @@ playground.xcworkspace
 # Xcode user settings
 xcuserdata/
 ```
+
+## Generate an SSH key and save it to the ssh-agent
+[GitHub Documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+### Generate a new SSH key
+* Create a new SSH key using the email below as a label.
+* When prompted, confirm the default file position to save it. 
+`ssh-keygen -t ed25519 -C "michaeldanko@icloud.com"`
+
+### Adding SSH key to the ssh-agent
+* Start the ssh-agent in the background
+`eval "$(ssh-agent -s)"`
+
+### Modify the SSH config
+* Check to see if the config exists
+ - `open ~/.ssh/config`
+* If the config doesn't exist, create it and then added the following content
+ - `touch ~/.ssh/config`
+ ```
+ Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+ ```
+### Add SSH private to the ssh-agent
+- `ssh-add --apple-use-keychain ~/.ssh/id_ed25519`
+
 ---
 
 ## Redirect Downloads folder to iCloud
