@@ -1,6 +1,9 @@
 # new-computer-setup
 A project of things that need to be setup to help configure a new computer
 
+## Showing hidden files on macOS
+* `Command` + `Shift` + `.`
+
 ## Using ZSH in Terminal
 
 ### Installing Oh My ZSH
@@ -87,6 +90,10 @@ xcuserdata/
 ### Add SSH private to the ssh-agent
 - `ssh-add --apple-use-keychain ~/.ssh/id_ed25519`
 
+### Add SSH public key to GitHub
+* Navigate to the GitHub profile settings (https://github.com/settings/profile)
+* Click to add a new SSH key and upload the contents of the **public** key that can be located in `~/.ssh`
+
 
 ---
 ## Generate a GPG key and add it to GitHub
@@ -116,4 +123,4 @@ ssb   rsa4096/3A260E8B789BD1DA 2022-07-16 [E]
 
 ### Configure git with GPG
 - `git config --global commit.gpgsign true`
-- `git config --global user.signingkey 1843A5F930706B28`
+- `git config --global user.signingkey <key_id>`
