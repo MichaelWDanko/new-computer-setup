@@ -27,6 +27,12 @@ A project of things that need to be setup to help configure a new computer
 4. Create a new redirect using the following command but verify that the path for the iCloud folder is correct `sudo ln -s /Users/michaeldanko/Library/Mobile\ Documents/com\~apple\~CloudDocs/Downloads ~/Downloads`
 
 ---
+## Setting up Brew & Installing Node
+* Visit `https://brew.sh` to get the latest Brew version to install
+* Add the Brew to your PATH value within the `.zshrc` file -> `:/opt/homebrew/bin/` where it's colon separated
+* Install Node using `brew install node`
+* If you have made changes to your PATH file and it has not yet been recognized, you can use `source ~/.zshrc` to reload the configurations.
+---
 ## Setting Up Git
 * Checking for git can be done with `git --version`.
 
