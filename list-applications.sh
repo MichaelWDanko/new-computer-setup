@@ -1,5 +1,13 @@
 #!/bin/zsh
 
+# ---
+# title: macOS Installed Applications to Markdown
+# description: This ZSH script generates a Markdown file listing all installed applications on macOS. 
+# It saves the file on the Desktop with a filename format like `Applications_YYYY-MM-DD.md`. 
+# If there are no apps in a directory, it handles it gracefully and logs a message.
+# usage: Run this script in a terminal to list applications in /Applications and ~/Applications directories.
+# ---
+
 # Get the current date in YYYY-MM-DD format
 current_date=$(date +%Y-%m-%d)
 
@@ -15,12 +23,20 @@ list_apps() {
     local directory=$1
     echo "## Applications in $directory" >> $output_file
     echo "" >> $output_file
-    for app in "$directory"/*.app; do
-        if [ -d "$app" ]; then
-            app_name=$(basename "$app" .app)
-            echo "- $app_name" >> $output_file
-        fi
-    done
+    
+    # Use the N glob qualifier to handle empty results gracefully
+    local apps=("$directory"/*.app(N))
+    
+    if [ ${#apps[@]} -eq 0 ]; then
+        echo "No applications found in $directory" >> $output_file
+    else
+        for app in "$directory"/*.app(N); do
+            if [ -d "$app" ]; then
+                app_name=$(basename "$app" .app)
+                echo "- $app_name" >> $output_file
+            fi
+        done
+    fi
     echo "" >> $output_file
 }
 
@@ -41,6 +57,6 @@ echo "   /   (o)   (o)   \     "
 echo "  |                 |    "
 echo "  |  \           /  |    "
 echo "   \  '.       .'  /     "
-echo "   '.    '---'  .'       "
+echo "   '.    '---'   .'      "
 echo "      '-._____.-'        "
 echo "============================================="
