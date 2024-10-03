@@ -43,6 +43,9 @@ A project of things that need to be setup to help configure a new computer
 ### Using Nano editor for Git commits
 - `git config --global core.editor "nano"`
 
+### Setup automatic remote branch
+- `git config --global --add --bool push.autoSetupRemote true`
+
 ### Setting up a global  `.gitignore`
 - `touch ~/.gitignore_global`
 2. `open ~/.gitignore_global`
