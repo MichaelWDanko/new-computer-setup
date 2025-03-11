@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>build</key>
-	<string>2226</string>
+	<string>2250</string>
 	<key>preferences</key>
 	<dict>
 		<key>Combined.Menu.Items</key>
@@ -30,9 +30,9 @@
 		<key>License.Validation.license</key>
 		<string>cafe-four-ouch-dull-2404-7</string>
 		<key>License.Validation.signature</key>
-		<string>MIGIAkIAvQsPAmuzZ7eY9yH+FGPmpZvX7bedU5gtvoRr4vLz0d8sco+9s2mz9wsR3/UbZYLRHyBYjJewNr54d4FHHmgu+JwCQgDvkHyB/gM2PAUngG35y0Xez0rsasbRb9dJyVA6FsF7PjLZWjYdaqkGkhrUUqdr5v6GKK6O5iWGaDZj8MY2n+zb3A==</string>
+		<string>MIGIAkIB0o9mS6BF8bhYJOOyMj5RK19y0PurSGL3P0tQVwhtletUQPj5XDi2QNVghFBM0e0UgzCkM8pYYy6MDdQ624yd2JoCQgGAYwYbBtPmTS+9OO81w8dcwvtyImcfoy8COIYijDgkVJOLj66YIMnXeO8AjXrSkUU7wu0h461obnyF2LYTGfbPGA==</string>
 		<key>License.Validation.time</key>
-		<string>1725619822</string>
+		<string>1741692189</string>
 		<key>Menu.Theme.Light</key>
 		<string>system</string>
 		<key>Menubar.Global.ReducePadding</key>
@@ -155,10 +155,12 @@
 		<key>Status.BackgroundInstall</key>
 		<true/>
 		<key>Status.Build.Last</key>
-		<real>2226</real>
+		<real>2250</real>
 		<key>Status.Version.Last</key>
-		<real>7.0199999809265137</real>
+		<real>7.0999999046325684</real>
 		<key>Updates.Attempts.2226</key>
+		<integer>1</integer>
+		<key>Updates.Attempts.2250</key>
 		<integer>1</integer>
 		<key>Weather.Global.AvailableProviders</key>
 		<array>
