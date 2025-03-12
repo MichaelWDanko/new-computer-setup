@@ -8,18 +8,6 @@ A project of things that need to be setup to help configure a new computer
 
 ---
 
-## Using ZSH in Terminal
-
-### Installing Oh My ZSH
-- `cd ~`
-- `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
-
-### Theme
-- File is `.zshrc` located in `~/`
-- `ZSH_THEME="gallois"`
-
----
-
 ## Redirect Downloads folder to iCloud
 1. Delete the existing `Downloads` folder using `sudo rm -r ~/Downloads`
 2. Open a Finder window for the parent folder of the icloud download folder
@@ -29,7 +17,8 @@ A project of things that need to be setup to help configure a new computer
 ---
 ## Setting up Brew & Installing Node
 * Visit `https://brew.sh` to get the latest Brew version to install
-* Add the Brew to your PATH value within the `.zshrc` file -> `:/opt/homebrew/bin/` where it's colon separated
+* Add the Brew to your PATH value within the `.zshrc` file -> `:/opt/homebrew/bin/` where it's colon separated.
+* * This previously worked by adding a new line at the bottom of the file `export PATH="/opt/homebrew/bin:$PATH"`
 * Install Node using `brew install node`
 * If you have made changes to your PATH file and it has not yet been recognized, you can use `source ~/.zshrc` to reload the configurations.
 ---
@@ -74,6 +63,16 @@ playground.xcworkspace
 # Xcode user settings
 xcuserdata/
 ```
+---
+## Using ZSH in Terminal
+
+### Installing Oh My ZSH
+- `cd ~`
+- `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+
+### Theme
+- File is `.zshrc` located in `~/`
+- `ZSH_THEME="gallois"`
 
 ---
 
